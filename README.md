@@ -14,7 +14,7 @@ Desenvolvido com árvore binária de decisão, BFS e DFS em Python.
 
 ```bash
 # Clone o repositório
-git clone https://github.com/usuario/akinator-signos.git
+git clone https://github.com/RyanGCassimiro/akinator-signos.git
 cd akinator-signos
 
 # Crie e ative o ambiente virtual
