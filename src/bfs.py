@@ -1,6 +1,6 @@
 from collections import deque
 
-def bfs(raiz):
+def bfs(root):
     """
     Realiza a Busca em Largura (BFS) na árvore de decisão.
     Percorre todos os nós nível por nível, da raiz até as folhas.
@@ -12,27 +12,27 @@ def bfs(raiz):
     Returns:
         list: Lista de nós visitados em ordem BFS
     """
-    if raiz is None:
+    if root is None:
         return []
 
-    visitados = []
-    fila = deque()
-    fila.append(raiz)
+    visited = []
+    queue = deque()
+    queue.append(root)
 
-    while fila:
-        no_atual = fila.popleft()
-        visitados.append(no_atual)
+    while queue:
+        current_node = queue.popleft()
+        visited.append(current_node)
 
         # Adiciona filhos na fila (esquerda = sim, direita = não)
-        if no_atual.sim is not None:
-            fila.append(no_atual.sim)
-        if no_atual.nao is not None:
-            fila.append(no_atual.nao)
+        if current_node.yes is not None:
+            queue.append(current_node.yes)
+        if current_node.no is not None:
+            queue.append(current_node.no)
 
-    return visitados
+    return visited
 
 
-def bfs_buscar_signo(raiz, signo_alvo):
+def bfs_search_sign(root, target_sign):
     """
     Busca um signo específico na árvore usando BFS.
 
@@ -43,27 +43,27 @@ def bfs_buscar_signo(raiz, signo_alvo):
     Returns:
         Node | None: O nó folha correspondente ao signo, ou None se não encontrado
     """
-    if raiz is None:
+    if root is None:
         return None
 
-    fila = deque()
-    fila.append(raiz)
+    queue = deque()
+    queue.append(root)
 
-    while fila:
-        no_atual = fila.popleft()
+    while queue:
+        current_node = queue.popleft()
 
         # Verifica se é o signo que estamos procurando
-        if no_atual.eh_folha() and no_atual.resposta == signo_alvo:
-            return no_atual
+        if current_node.eh_folha() and current_node.answer == target_sign:
+            return current_node
 
-        if no_atual.sim is not None:
-            fila.append(no_atual.sim)
-        if no_atual.nao is not None:
-            fila.append(no_atual.nao)
+        if current_node.yes is not None:
+            queue.append(current_node.yes)
+        if current_node.no is not None:
+            queue.append(current_node.no)
 
     return None
 
-def bfs_nivel_por_nivel(raiz):
+def bfs_level_by_level(root):
     """
     Retorna os nós da árvore organizados por nível.
     Útil para visualização da árvore no Streamlit.
@@ -74,26 +74,26 @@ def bfs_nivel_por_nivel(raiz):
     Returns:
         list[list]: Lista de listas, onde cada sublista contém os nós de um nível
     """
-    if raiz is None:
+    if root is None:
         return []
 
-    niveis = []
-    fila = deque()
-    fila.append(raiz)
+    levels = []
+    queue = deque()
+    queue.append(root)
 
-    while fila:
-        tamanho_nivel = len(fila)
-        nivel_atual = []
+    while queue:
+        level_size = len(queue)
+        current_level = []
 
-        for _ in range(tamanho_nivel):
-            no = fila.popleft()
-            nivel_atual.append(no)
+        for _ in range(level_size):
+            node = queue.popleft()
+            current_level.append(node)
 
-            if no.sim is not None:
-                fila.append(no.sim)
-            if no.nao is not None:
-                fila.append(no.nao)
+            if node.yes is not None:
+                queue.append(node.yes)
+            if node.no is not None:
+                queue.append(node.no)
 
-        niveis.append(nivel_atual)
+        levels.append(current_level)
 
-    return niveis
+    return levels
