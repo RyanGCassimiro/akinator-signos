@@ -8,7 +8,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from node import Node
-from arvore import build_tree
+from tree import build_tree
 from dfs import dfs, dfs_search_sign, dfs_path
 from bfs import bfs, bfs_buscar_signo, bfs_nivel_por_nivel
 
