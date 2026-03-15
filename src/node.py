@@ -5,5 +5,5 @@ class Node:
         self.yes = None
         self.no = None
 
-    def id_leaf(self):
+    def is_leaf(self):
         return self.answer is not None
