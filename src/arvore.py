@@ -18,9 +18,10 @@ def build_tree():
 
     # Criando os nós de perguntas RAMO FOGO (Áries, Leão e Sagitário)
     # Áries -> antes de Maio | Leão -> Julho a Agosto | Sagitário -> Novembro a Dezembro; Todos são signos de fogo
-    n_leo_sag = Node(question="Seu aniversário é entre é no segundo semestre? (Julho - Dezembro)")
+    n_leo_sag = Node(question="Seu aniversário é antes de Setembro?")
     n_leo_sag.yes = leo
     n_leo_sag.no = sagittarius
+
     
     n_fire = Node(question="Seu aniversário é antes de Maio?")
     n_fire.yes = aries
@@ -28,13 +29,14 @@ def build_tree():
 
     # Criando os nós de perguntas RAMO AR (Gêmeos, Libra e Aquário)
     # Gêmeos -> antes de Junho | Libra -> Setembro a Outubro | Aquário -> Janeiro a Fevereiro; Todos são signos de ar
-    n_libra_aquarius = Node(question="Seu aniversário é antes de Novembro?")
-    n_libra_aquarius.yes = libra
-    n_libra_aquarius.no = aquarius
+    n_gemini_aquarius = Node(question="Seu aniversário é antes de Março?")
+    n_gemini_aquarius.yes = aquarius
+    n_gemini_aquarius.no = gemini
 
-    n_air = Node(question="Seu anversário é antes de Julho?")
-    n_air.yes = gemini
-    n_air.no = n_libra_aquarius
+    n_air = Node(question="Seu aniversário é depois de Agosto?")
+    n_air.yes = libra
+    n_air.no = n_gemini_aquarius
+
 
     # Criando RAMO FOGO ou AR
 
@@ -54,13 +56,14 @@ def build_tree():
 
     # Criando os nós de perguntas RAMO ÁGUA (Câncer, Escorpião e Peixes)
     # Câncer -> antes de Julho | Escorpião -> Outubro a Novembro | Peixes -> Fevereiro a Março; Todos são signos de água
-    n_scorpion_pisces = Node(question="Seu aniversário é antes de Dezembro?")
-    n_scorpion_pisces.yes = scorpion
-    n_scorpion_pisces.no = pisces
+    n_cancer_pisces = Node(question="Seu aniversário é antes de Abril?")
+    n_cancer_pisces.yes = pisces
+    n_cancer_pisces.no = cancer
 
-    n_water = Node(question="Seu aniversário é antes de agosto?")
-    n_water.yes = cancer
-    n_water.no = n_scorpion_pisces
+    n_water = Node(question="Seu aniversário é antes de Julho?")
+    n_water.yes = n_cancer_pisces
+    n_water.no = scorpion
+
 
     # Criando RAMO TERRA ou ÁGUA
     n_earth_water = Node(question="É do elemento terra? (Touro, Virgem, Capricórnio)")
