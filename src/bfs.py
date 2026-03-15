@@ -53,7 +53,7 @@ def bfs_search_sign(root, target_sign):
         current_node = queue.popleft()
 
         # Verifica se é o signo que estamos procurando
-        if current_node.eh_folha() and current_node.answer == target_sign:
+        if current_node.is_leaf() and current_node.answer == target_sign:
             return current_node
 
         if current_node.yes is not None:
