@@ -275,7 +275,7 @@ with st.sidebar:
     st.markdown(
         '<div class="sidebar-title">✨ Akinator Signos</div>', unsafe_allow_html=True
     )
-    if st.button("🏠  Inicio", use_container_width=True):
+    if st.button("🏠  Início", use_container_width=True):
         st.session_state.pagina = "inicio"
     if st.button("🎮  Jogar", use_container_width=True):
         st.session_state.pagina = "jogar"
@@ -285,7 +285,7 @@ with st.sidebar:
         )
         st.session_state.nos_visitados = []
         st.session_state.jogo_encerrado = False
-    if st.button("🌳  Ver Arvore", use_container_width=True):
+    if st.button("🌳  Ver Árvore", use_container_width=True):
         st.session_state.pagina = "arvore"
     st.markdown("---")
     if st.button("📊  BFS vs DFS", use_container_width=True):
@@ -334,12 +334,12 @@ if st.session_state.pagina == "inicio":
     col1, col2, col3 = st.columns(3)
     with col1:
         st.markdown(
-            '<div class="stat-card"><span class="stat-number">12</span><span class="stat-label">Signos na arvore</span></div>',
+            '<div class="stat-card"><span class="stat-number">12</span><span class="stat-label">Signos na árvore</span></div>',
             unsafe_allow_html=True,
         )
     with col2:
         st.markdown(
-            '<div class="stat-card"><span class="stat-number">23</span><span class="stat-label">Nos no total</span></div>',
+            '<div class="stat-card"><span class="stat-number">23</span><span class="stat-label">Nós no total</span></div>',
             unsafe_allow_html=True,
         )
     with col3:
@@ -352,15 +352,15 @@ if st.session_state.pagina == "inicio":
         '<div class="section-title">Sobre o sistema</div>', unsafe_allow_html=True
     )
     st.markdown(
-        f'<div class="info-card">Madame Dira usa uma <strong style="color:{t["accent"]}">arvore binaria de decisao</strong> para adivinhar o seu signo do zodiaco atraves de perguntas sobre seu aniversario e caracteristicas do signo.<br><br>Cada resposta que voce da navega por um caminho da arvore usando <strong style="color:{t["accent"]}">BFS</strong> (busca em largura) ou <strong style="color:{t["accent"]}">DFS</strong> (busca em profundidade) ate chegar na resposta final.</div>',
+        f'<div class="info-card">Madame Dira usa uma <strong style="color:{t["accent"]}">arvore binária de decisão</strong> para adivinhar o seu signo do zodíaco através de perguntas sobre seu aniversário e características do signo.<br><br>Cada resposta que você da navega por um caminho da árvore usando <strong style="color:{t["accent"]}">BFS</strong> (busca em largura) ou <strong style="color:{t["accent"]}">DFS</strong> (busca em profundidade) até chegar na resposta final.</div>',
         unsafe_allow_html=True,
     )
     st.markdown('<div class="section-title">Como jogar</div>', unsafe_allow_html=True)
     steps = [
-        "Pense em um signo do zodiaco — pode ser o seu ou qualquer outro.",
-        "Responda as perguntas de Madame Dira com Sim ou Nao.",
-        "Veja a arvore se atualizar em tempo real enquanto o caminho e percorrido.",
-        "Descubra se Madame Dira acertou e compare os algoritmos!",
+    "Pense em um signo do zodíaco — pode ser o seu ou qualquer outro.",
+    "Responda às perguntas de Madame Dira com Sim ou Não.",
+    "Veja a árvore se atualizar em tempo real enquanto o caminho é percorrido.",
+    "Descubra se Madame Dira acertou e compare os algoritmos!",
     ]
     for i, step in enumerate(steps, 1):
         st.markdown(
@@ -572,22 +572,22 @@ elif st.session_state.pagina == "comparacao":
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(
-            f'<div class="info-card"><div style="font-family:Cinzel,serif;font-size:16px;color:{t["accent2"]};margin-bottom:12px;">BFS — Busca em Largura</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">ESTRUTURA</div><div style="margin-bottom:12px;">Fila (deque) — explora nivel por nivel</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">VANTAGENS</div><div style="margin-bottom:12px;">Garante o caminho mais curto. Boa para arvores rasas.</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">DESVANTAGENS</div><div>Usa mais memoria — guarda todos os nos do nivel atual na fila.</div></div>',
+            f'<div class="info-card"><div style="font-family:Cinzel,serif;font-size:16px;color:{t["accent2"]};margin-bottom:12px;">BFS — Busca em Largura</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">ESTRUTURA</div><div style="margin-bottom:12px;">Fila (deque) — explora nÍvel por nÍvel</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">VANTAGENS</div><div style="margin-bottom:12px;">Garante o caminho mais curto. Boa para árvores rasas.</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">DESVANTAGENS</div><div>Usa mais memória — guarda todos os nós do nÍvel atual na fila.</div></div>',
             unsafe_allow_html=True,
         )
     with col2:
         st.markdown(
-            f'<div class="info-card"><div style="font-family:Cinzel,serif;font-size:16px;color:{t["accent"]};margin-bottom:12px;">DFS — Busca em Profundidade</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">ESTRUTURA</div><div style="margin-bottom:12px;">Recursao (pilha implicita) — desce por um ramo ate o fim</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">VANTAGENS</div><div style="margin-bottom:12px;">Usa menos memoria. Ideal para arvores profundas como esta.</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">DESVANTAGENS</div><div>Pode demorar mais em arvores largas. Nao garante caminho minimo.</div></div>',
+            f'<div class="info-card"><div style="font-family:Cinzel,serif;font-size:16px;color:{t["accent"]};margin-bottom:12px;">DFS — Busca em Profundidade</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">ESTRUTURA</div><div style="margin-bottom:12px;">Recursão (pilha implícita), desce por um ramo até o fim</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">VANTAGENS</div><div style="margin-bottom:12px;">Usa menos memória. Ideal para árvores profundas como esta.</div><div style="color:{t["muted2"]};font-size:12px;margin-bottom:8px;">DESVANTAGENS</div><div>Pode demorar mais em árvores largas. Não garante caminho mínimo.</div></div>',
             unsafe_allow_html=True,
         )
     st.markdown(
-        '<div class="section-title">Nesta arvore de signos</div>',
+        '<div class="section-title">Nesta árvore de signos</div>',
         unsafe_allow_html=True,
     )
     dfs_count = len(dfs(tree))
     bfs_count = len(bfs(tree))
     st.markdown(
-        f'<div class="info-card">Ambos os algoritmos visitam os mesmos <strong style="color:{t["accent"]}">{dfs_count} nos</strong> no total, porem em <strong style="color:{t["accent"]}">ordens diferentes</strong>.<br><br>O <strong style="color:{t["accent"]}">DFS</strong> desce por um ramo completo antes de voltar — ideal para o jogo, pois segue o caminho das respostas diretamente ate o signo.<br><br>O <strong style="color:{t["accent2"]}">BFS</strong> avalia todas as perguntas do mesmo nivel antes de descer — util para garantir que nenhuma pergunta de mesmo nivel seja ignorada.</div>',
+        f'<div class="info-card">Ambos os algoritmos visitam os mesmos <strong style="color:{t["accent"]}">{dfs_count} nós</strong> no total, porém em <strong style="color:{t["accent"]}">ordens diferentes</strong>.<br><br>O <strong style="color:{t["accent"]}">DFS</strong> desce por um ramo completo antes de voltar; ideal para o jogo, pois segue o caminho das respostas diretamente ate o signo.<br><br>O <strong style="color:{t["accent2"]}">BFS</strong> avalia todas as perguntas do mesmo nível antes de descer, útil para garantir que nenhuma pergunta de mesmo nível seja ignorada.</div>',
         unsafe_allow_html=True,
     )
 
@@ -597,6 +597,6 @@ elif st.session_state.pagina == "sobre":
         '<div class="section-title">ℹ️ Sobre o projeto</div>', unsafe_allow_html=True
     )
     st.markdown(
-        f'<div class="info-card"><strong style="color:{t["accent"]}">Akinator Signos</strong> e um projeto academico desenvolvido para a disciplina de <strong>Estrutura de Dados Avancada</strong>.<br><br>O sistema implementa uma <strong style="color:{t["accent"]}">arvore binaria de decisao</strong> com 12 signos do zodiaco, percorrida pelos algoritmos <strong>BFS</strong> e <strong>DFS</strong>.<br><br><strong style="color:{t["muted2"]}">Desenvolvido por:</strong><br>Wanessa Costa & Ryan<br><br><strong style="color:{t["muted2"]}">Tecnologias:</strong><br>Python · Streamlit · Graphviz · pytest</div>',
+        f'<div class="info-card"><strong style="color:{t["accent"]}">Akinator Signos</strong> é um projeto acadêmico desenvolvido para a disciplina de <strong>Estrutura de Dados Avançada</strong>.<br><br>O sistema implementa uma <strong style="color:{t["accent"]}">árvore binária de decisão</strong> com 12 signos do zodíaco, percorrida pelos algoritmos <strong>BFS</strong> e <strong>DFS</strong>.<br><br><strong style="color:{t["muted2"]}">Desenvolvido por:</strong><br>Wanessa Costa & Ryan Cassimiro<br><br><strong style="color:{t["muted2"]}">Tecnologias:</strong><br>Python · Streamlit · Graphviz · pytest</div>',
         unsafe_allow_html=True,
     )
