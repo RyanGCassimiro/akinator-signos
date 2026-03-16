@@ -1,9 +1,10 @@
 # Akinator Signos ♈
 " Onde a lógica dos grafos encontra o mistério dos astros. 🔮✨"
 
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-brightred)
-![pytest](https://img.shields.io/badge/tests-passing-green)
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-brightred)](https://streamlit.io)
+[![pytest](https://img.shields.io/badge/tests-passing-green)](https://docs.pytest.org)
+
 
 ![Madame Dira](assets/madame_dira.png)
 <sub><i>Imagem Gerada pelo Gemini, usando o modelo Nano Banana 2</i></sub>
