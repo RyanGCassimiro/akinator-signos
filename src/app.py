@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from node import Node
 from tree import build_tree
 from dfs import dfs, dfs_search_sign, dfs_path
-from bfs import bfs, dfs_search_sign, bfs_level_by_level
+from bfs import bfs, bfs_search_sign, bfs_level_by_level
 
 st.set_page_config(
     page_title="Akinator Signos",
