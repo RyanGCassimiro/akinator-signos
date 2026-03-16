@@ -34,19 +34,27 @@ streamlit run src/app.py
 ```
 akinator-signos/
 ├── venv/               ← ambiente virtual (não vai pro GitHub)
+├── assets/
+│   ├── madame_dira.png
 ├── src/
-│   ├── node.py         ← Classe Node
-│   ├── arvore.py       ← Montagem da árvore de signos
+│   ├── app.py          ← Interface Streamlit
 │   ├── bfs.py          ← Algoritmo BFS
 │   ├── dfs.py          ← Algoritmo DFS
-│   ├── jogo.py         ← Simulação do jogo (input s/n)
-│   └── app.py          ← Interface Streamlit
+│   ├── game.py         ← Simulação do jogo (input s/n)
+│   ├── node.py         ← Classe Node
+│   └── tree.py       ← Montagem da árvore de signos
 ├── tests/
 │   └── test_arvore.py  ← Testes com pytest
 ├── .gitignore
-├── requirements.txt
-└── README.md
+├── pytest.ini
+├── README.md
+└── requirements.txt
 ```
+## Como Jogar
+1. Pense em um signo do zodíaco - pode ser o seu ou qualquer outro.
+2. Responda às perguntas da Madame Dira com *Sim* ou *Não*.
+3. Veja a árvore se atualizar em tempo real enquanto o caminho é percorrido
+4. Descubra se Madame Dira acertou e compare os algoritmos!
 
 ## Algoritmos
 
