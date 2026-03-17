@@ -84,8 +84,9 @@ akinator-signos/
 │   ├── dfs.py          ← Algoritmo DFS
 │   ├── game.py         ← Simulação do jogo (input s/n)
 │   ├── node.py         ← Classe Node
-│   └── tree.py       ← Montagem da árvore de signos
+│   └── tree.py         ← Montagem da árvore de signos
 ├── tests/
+│   ├── test_algorithms.py  ← Teste dos algorítmos
 │   └── test_tree.py  ← Testes com pytest
 ├── .gitignore
 ├── pytest.ini
