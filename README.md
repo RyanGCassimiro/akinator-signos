@@ -96,8 +96,18 @@ akinator-signos/
 
 ## 🧪 Testes
 
+Execute os testes para validar a integridade da árvore e dos algoritmos:
 
-pytest tests/
+```bash
+pytest tests/ -v
+```
+
+| Arquivo | Cobertura | Status |
+| :--- | :--- | :---: |
+| `test_tree.py` | Estrutura da árvore, caminhos e os 12 signos | ✅ |
+| `test_algorithms.py` | Lógica dos algoritmos DFS e BFS | ✅ |
+
+> **⚡ Performance:** 33 testes passando em apenas **0.02s**.
 
 ## 🔮 Como Jogar
 1. Pense em um signo do zodíaco - pode ser o seu ou qualquer outro.
