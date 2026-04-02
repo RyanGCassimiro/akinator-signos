@@ -63,7 +63,7 @@ cd akinator-signos
 # Crie e ative o ambiente virtual
 python3 -m venv venv
 source venv/bin/activate  # Mac/Linux
-# venv\Scripts\activate   # Windows
+venv\Scripts\activate     # Windows
 
 # Instale as dependências
 pip install -r requirements.txt
